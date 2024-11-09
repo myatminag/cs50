@@ -1,0 +1,33 @@
+/* Styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+/* Header style */
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+  /* Paragraph style */
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+  /* Button style */
+button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+}
+
+  /* Navbar brand style */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}

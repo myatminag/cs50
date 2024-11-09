@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                 <button class="answer-btn" onclick="checkMultipleChoiceAnswer(this, false)">6 people per 1 sheep</button>
+                 <button class="answer-btn" onclick="checkMultipleChoiceAnswer(this, false)">3 people per 1 sheep</button>
+                 <button class="answer-btn" onclick="checkMultipleChoiceAnswer(this, true)">1 person per 1 sheep</button>
+                 <button class="answer-btn" onclick="checkMultipleChoiceAnswer(this, false)">1 person per 3 sheep</button>
+                 <button class="answer-btn" onclick="checkMultipleChoiceAnswer(this, false)">1 person per 6 sheep</button>
+                 <p id="multiple-feedback" class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type="text" id="free-response-input" placeholder="Enter your answer here">
+                <button onclick="checkFreeResponseAnswer()">Check Answer</button>
+                <p id="free-response-feedback" class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function checkMultipleChoiceAnswer(button, isCorrect) {
+        const buttons = document.querySelectorAll("#multiple-choice .answer-btn");
+        buttons.forEach(btn => btn.classList.remove("correct", "incorrect"));
+
+        if (isCorrect) {
+            button.classList.add("correct");
+            document.getElementById("multiple-feedback").innerText = "Correct!";
+        } else {
+            button.classList.add("incorrect");
+            document.getElementById("multiple-feedback").innerText = "Incorrect";
+        }
+    }
+
+    function checkFreeResponseAnswer() {
+        const input = document.getElementById("free-response-input");
+        const feedback = document.getElementById("free-response-feedback");
+
+        const userAnswer = input.value.trim();
+        const correctAnswer = "Myanmar";
+
+        input.classList.remove("correct", "incorrect");
+
+        if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+            input.classList.add("correct");
+            feedback.innerText = "Correct!";
+        } else {
+            input.classList.add("incorrect");
+            feedback.innerText = "Incorrect";
+        }
+    }
+</script>

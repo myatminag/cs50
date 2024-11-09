@@ -1,0 +1,22 @@
+HTML Tags Used:
+1. <nav> - For the navigation bar
+2. <ul> - For an unordered list in the navigation menu
+3. <li> - To list navigation items
+4. <button> - For an interactive button
+5. <p> - To display paragraphs
+6. <h1> - For main headers
+7. <meta> - To define metadata
+8. <a> - For hyperlinks
+9. <div> - For dividing content sections
+10. <script> - For JavaScript inclusion
+
+CSS Properties Used:
+1. font-family - Set the font style for the body text
+2. background-color - Background color for the body
+3. color - Text color for headers
+4. font-size - Adjusted font size for headers and paragraphs
+5. padding - Applied padding to the button for spacing
+
+Bootstrap and JavaScript:
+Bootstrap - Used the Navbar component for responsive navigation and the Button component.
+JavaScript - Added an alert triggered by a button click.
